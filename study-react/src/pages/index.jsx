@@ -1,15 +1,13 @@
 import { Header } from '@/components/Header'
 import { Main } from '@/components/Main'
-import { useCallback, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  // const foo = 1;
+  const [count, setCount] = useState(1);
 
-  // const handleClick = useCallback((e) => {
-  //   console.log(e.target.href)
-  //   e.preventDefault();
-  //   alert(foo);
-  // }, []);
+  const handleClick = (e) => {
+    setCount(count => count + 1);
+  };
 
   useEffect(() => {
     document.body.style.backgroundColor = 'lightblue';
@@ -22,9 +20,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <a href="/about" onClick={handleClick}>
-        ボタン
-      </a> */}
+      <h1>{count}</h1>
+      <button onClick={handleClick}>ボタン</button>
       <Main page="index"/>
     </>
   )
