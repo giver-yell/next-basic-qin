@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { useBgLightBlue } from '@/hooks/useBgLightBlue';
+import { useBgLightBlue } from '@/hooks/useBgColor';
 import { useCounter } from '@/hooks/useCounter';
 import { useInputArray } from '@/hooks/useInputArray';
 
