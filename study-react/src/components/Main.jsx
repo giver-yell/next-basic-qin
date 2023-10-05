@@ -27,20 +27,20 @@ const ITEMS = [
 ]
 
 const inter = Inter({ subsets: ['latin'] })
-  export function Main(props) {
-    const [items, setItems] = useState(ITEMS)
-    const handleReduce = useCallback(() => {
-    setItems((prevItems) => {
-      return prevItems.slice(0, prevItems.length - 1);
-    });
-  }, []);
+export const Main = (props) => {
+  const [items, setItems] = useState(ITEMS)
+  const handleReduce = useCallback(() => {
+  setItems((prevItems) => {
+    return prevItems.slice(0, prevItems.length - 1);
+  });
+}, []);
 
-  return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
-      <Headline page={props.page}>
-        <code className="font-mono font-bold">pages/{props.page}.js</code>
-      </Headline>
-      <Links items={items} handleReduce={handleReduce} />
-    </main>
-  )
+return (
+  <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
+    <Headline page={props.page}>
+      <code className="font-mono font-bold">pages/{props.page}.js</code>
+    </Headline>
+    <Links items={items} handleReduce={handleReduce} />
+  </main>
+)
 }
