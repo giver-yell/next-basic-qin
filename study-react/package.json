@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
@@ -19,6 +20,7 @@
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.15"
+    "@babel/eslint-parser": "^7.22.15",
+    "prettier": "^3.0.3"
   }
 }
