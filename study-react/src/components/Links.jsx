@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function Links({items, handleReduce}) {
+export const Links = ({items, handleReduce}) => {
   return (
     <>
       <button onClick={handleReduce}>減らす</button>
