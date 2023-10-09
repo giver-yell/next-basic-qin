@@ -13,7 +13,7 @@ const fetcher = async (url) => {
 
 export const usePosts = () => {
   const { data, error, isLoading } = useSWR(
-    "https://jsonplaceholder.typicode.com/posts?id=2000",
+    "https://jsonplaceholder.typicode.com/posts",
     fetcher,
   );
   return {
