@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <Header />
       <Posts />
-      <Main page="index" />
+      <Main page="pages" />
     </>
   );
 };
