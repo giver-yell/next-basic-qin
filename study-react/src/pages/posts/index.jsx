@@ -1,15 +1,15 @@
 import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
-import { Posts } from "@/components/Posts";
+import { Posts as PostsComponent } from "@/components/Posts";
 
-const Home = () => {
+const Posts = () => {
   return (
     <>
       <Header />
-      <Posts />
-      <Main page="pages" />
+      <PostsComponent />
+      <Main page="Posts page" />
     </>
   );
 };
 
-export default Home;
+export default Posts;

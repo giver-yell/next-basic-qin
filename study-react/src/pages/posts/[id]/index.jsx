@@ -3,7 +3,7 @@ import { Main } from "@/components/Main";
 import { Post } from "@/components/Post";
 import { UsePost } from "@/hooks/usePost";
 
-const PostId = () => {
+const PostsId = () => {
   const { post, user, error, isLoading } = UsePost();
   console.log(user, error, isLoading);
 
@@ -16,4 +16,4 @@ const PostId = () => {
   );
 };
 
-export default PostId;
+export default PostsId;
