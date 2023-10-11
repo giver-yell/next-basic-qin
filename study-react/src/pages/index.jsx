@@ -1,15 +1,13 @@
 import { Header } from "@/components/Header";
-import { Main } from "@/components/Main";
-import { Posts } from "@/components/Posts";
 
-const Home = () => {
+const Index = () => {
   return (
-    <>
+    <div>
       <Header />
-      <Posts />
-      <Main page="index" />
-    </>
+      <h1>Next.jsで学ぶReact講座</h1>
+      <p>JSONPlaceholderのAPIをいろいろ叩いてみるよ</p>
+    </div>
   );
 };
 
-export default Home;
+export default Index;

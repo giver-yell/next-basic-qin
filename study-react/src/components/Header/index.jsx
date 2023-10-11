@@ -3,7 +3,7 @@ import classes from "@/components/Header/Header.module.css";
 
 const NAV_ITEMS = [
   { href: "/", label: "Index" },
-  { href: "/about", label: "About" },
+  { href: "/posts", label: "Posts" },
 ];
 
 export const Header = () => {
