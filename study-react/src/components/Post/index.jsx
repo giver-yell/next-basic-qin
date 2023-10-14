@@ -1,5 +1,6 @@
 import { CommentsByPostId } from "@/components/Comments/CommentsByPostId";
-import { UserById } from "@/components/User/userByid";
+import { UserById } from "@/components/User/UserById";
+
 import { UsePost } from "@/hooks/usePost";
 
 export const Post = () => {
