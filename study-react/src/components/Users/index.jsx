@@ -1,4 +1,4 @@
-import { useUsers } from "@/hooks/useUsers";
+import { useUsers } from "@/hooks/useFetchArray";
 import Link from "next/link";
 
 export const UsersComponent = () => {
