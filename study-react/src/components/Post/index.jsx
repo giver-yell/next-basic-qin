@@ -1,7 +1,9 @@
+import { CommentsByPostId } from "@/components/Comments/CommentsByPostId";
+import { UserById } from "@/components/User/userByid";
 import { UsePost } from "@/hooks/usePost";
 
 export const Post = () => {
-  const { post, user, error, isLoading } = UsePost();
+  const { data, error, isLoading } = UsePost();
 
   if (isLoading) {
     return <div>loading...</div>;
@@ -13,10 +15,11 @@ export const Post = () => {
   return (
     <div>
       <div>
-        <title>{post?.title}</title>
-        <p>{post?.body}</p>
+        <title>{data?.title}</title>
+        <p>{data?.body}</p>
       </div>
-      {user?.name ? <div>Created by {user.name}</div> : null}
+      <UserById id={data?.userId} />
+      <CommentsByPostId id={data?.id} />
     </div>
   );
 };
