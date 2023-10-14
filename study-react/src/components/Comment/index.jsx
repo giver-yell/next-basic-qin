@@ -1,7 +1,7 @@
 const { useComment } = require("@/hooks/useComment");
 
 export const CommentComponent = () => {
-  const { data, error, isLoading } = useComment();
+  const { data, error, isLoading, isEmpty } = useComment();
 
   if (isLoading) {
     return <div>loading...</div>;
@@ -9,6 +9,10 @@ export const CommentComponent = () => {
 
   if (error) {
     return <div>{error.message}</div>;
+  }
+
+  if (isEmpty || !data) {
+    return <div>no comment</div>;
   }
 
   return (

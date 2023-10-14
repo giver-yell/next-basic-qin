@@ -15,5 +15,6 @@ export const useComment = () => {
     data,
     error,
     isLoading,
+    isEmpty: data && data.length === 0,
   };
 };

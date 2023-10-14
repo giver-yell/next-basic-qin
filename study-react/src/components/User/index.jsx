@@ -1,7 +1,7 @@
 const { useUser } = require("@/hooks/useUser");
 
 export const UserComponent = () => {
-  const { data, error, isLoading } = useUser();
+  const { data, error, isLoading, isEmpty } = useUser();
 
   if (isLoading) {
     return <div>loading...</div>;
@@ -9,6 +9,10 @@ export const UserComponent = () => {
 
   if (error) {
     return <div>{error.message}</div>;
+  }
+
+  if (isEmpty || !data) {
+    return <div>no user</div>;
   }
 
   return (
