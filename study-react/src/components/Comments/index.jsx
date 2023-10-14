@@ -1,6 +1,5 @@
+import { useComments } from "@/hooks/useFetchArray";
 import Link from "next/link";
-
-const { useComments } = require("@/hooks/useComments");
 
 export const CommentsComponent = () => {
   const { data, error, isLoading, isEmpty } = useComments();
