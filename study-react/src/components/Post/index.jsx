@@ -2,9 +2,11 @@ import { CommentsByPostId } from "@/components/Comments/CommentsByPostId";
 import { UserById } from "@/components/User/UserById";
 
 import { UsePost } from "@/hooks/usePost";
+import { useRouter } from "next/router";
 
 export const Post = () => {
-  const { data, error, isLoading } = UsePost();
+  const router = useRouter();
+  const { data, error, isLoading } = UsePost(router.query.id);
 
   if (isLoading) {
     return <div>loading...</div>;
