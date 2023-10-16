@@ -19,5 +19,5 @@ export const UserById = (props) => {
     return <div>no user</div>;
   }
 
-  return <div>Created by {data?.name}.</div>;
+  return <div className="text-lg">Created by {data?.name}.</div>;
 };

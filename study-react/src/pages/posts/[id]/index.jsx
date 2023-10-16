@@ -1,5 +1,4 @@
 import { Header } from "@/components/Header";
-import { Main } from "@/components/Main";
 import { Post } from "@/components/Post";
 import { UsePost } from "@/hooks/usePost";
 
@@ -11,7 +10,6 @@ const PostsId = () => {
     <>
       <Header />
       <Post />
-      <Main page="index" />
     </>
   );
 };
