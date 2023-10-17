@@ -5,7 +5,7 @@ const { default: useSWR } = require("swr");
 
 export const useUser = () => {
   const router = useRouter();
-  const { data, error, isLoading, isEmpty } = useSWR(
+  const { data, error, isLoading } = useSWR(
     router.query.id
       ? `https://jsonplaceholder.typicode.com/users/${router.query.id}`
       : null,
