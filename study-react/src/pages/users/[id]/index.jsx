@@ -5,13 +5,16 @@ import { SWRConfig } from "swr";
 
 export const getServerSideProps = async (ctx) => {
   const { id } = ctx.query;
-  const API_URL = `https://jsonplaceholder.typicode.com/users/${id}`;
-  const data = await fetcher(API_URL);
+  const USER_API_URL = `https://jsonplaceholder.typicode.com/users/${id}`;
+  const userData = await fetcher(USER_API_URL);
+  const POSTS_API_URL = `https://jsonplaceholder.typicode.com/posts?userId=${id}`;
+  const postsData = await fetcher(POSTS_API_URL);
 
   return {
     props: {
       fallback: {
-        [API_URL]: data,
+        [USER_API_URL]: userData,
+        [POSTS_API_URL]: postsData,
       },
     },
   };

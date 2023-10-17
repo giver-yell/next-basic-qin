@@ -1,8 +1,8 @@
-const { fetcher } = require("@/utils/fetcher");
-const { default: useSWR } = require("swr");
+import { fetcher } from "@/utils/fetcher";
+import useSWRImmutable from "swr/immutable";
 
 const useFetchArray = (url) => {
-  const { data, error, isLoading } = useSWR(url, fetcher);
+  const { data, error, isLoading } = useSWRImmutable(url, fetcher);
 
   return {
     data,
