@@ -23,6 +23,7 @@
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.15",
     "prettier": "^3.0.3"
   }
