@@ -1,12 +1,12 @@
 import "tailwindcss/tailwind.css";
-import { Layout } from "@/components/Layout";
+import { AppLayout } from "@/layouts/AppLayout";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Layout>
+      <AppLayout>
         <Component {...pageProps} />
-      </Layout>
+      </AppLayout>
     </>
   );
 }
