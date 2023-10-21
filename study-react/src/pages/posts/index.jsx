@@ -1,13 +1,7 @@
-import { Header } from "@/components/Header";
-import { Posts as PostsComponent } from "@/components/Posts";
+import { PostList } from "@/components/Post/PostList";
 
 const Posts = () => {
-  return (
-    <>
-      <Header />
-      <PostsComponent />
-    </>
-  );
+  return <PostList />;
 };
 
 export default Posts;

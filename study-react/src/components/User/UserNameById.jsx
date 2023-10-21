@@ -1,11 +1,9 @@
+import { UseFetch } from "@/hooks/useFetch";
 import { API_URL } from "@/utils/const";
-import { fetcher } from "@/utils/fetcher";
-import useSWR from "swr";
 
-export const UserById = (props) => {
-  const { data, error, isLoading } = useSWR(
+export const UserNameById = (props) => {
+  const { data, error, isLoading } = UseFetch(
     props?.id ? `${API_URL}/users/${props.id}` : null,
-    fetcher,
   );
 
   if (isLoading) {
@@ -14,10 +12,6 @@ export const UserById = (props) => {
 
   if (error) {
     return <div>{error.message}</div>;
-  }
-
-  if (!data || data.length === 0) {
-    return <div>no user</div>;
   }
 
   return <div className="text-lg">Created by {data?.name}.</div>;

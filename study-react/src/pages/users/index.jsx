@@ -1,5 +1,4 @@
-import { Header } from "@/components/Header";
-import { UsersComponent } from "@/components/Users";
+import { UserList } from "@/components/User/UserList";
 import { API_URL } from "@/utils/const";
 import { fetcher } from "@/utils/fetcher";
 import { SWRConfig } from "swr";
@@ -20,12 +19,9 @@ export const getServerSideProps = async () => {
 const Users = (props) => {
   const { fallback } = props;
   return (
-    <>
-      <SWRConfig value={{ fallback }}>
-        <Header />
-        <UsersComponent />
-      </SWRConfig>
-    </>
+    <SWRConfig value={{ fallback }}>
+      <UserList />
+    </SWRConfig>
   );
 };
 
